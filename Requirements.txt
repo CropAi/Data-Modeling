@@ -1,14 +1,12 @@
-Requirements
-First install python 3 latest version of 64 bit
-Then write the below commands in CMD
+Required Libraries For Data Modeling
 
-1. pip install numpy
-2. pip install pandas
-3. pip install matplotlib
-4. pip install os
-5. pip install scipy
-6. pip install opencv-python
-7. pip install scikit-learn
-8. pip install keras
-9. pip install tensorflow
-10. pip install jupyter notebook
+1. Numpy
+2. Pandas
+3. Matplotlib
+4. Os
+5. Scipy
+6. Opencv
+7. Scikit-learn
+8. Keras
+9. Tensorflow
+
