@@ -2,18 +2,20 @@
 Dataset used : https://www.kaggle.com/emmarex/plantdisease
 
 ## Installation
+
 Tensorflow is a popular end-to-end Machine Learning Library from Google whcih supports developing Machine Learning Models and Data Modelling. It has a comprehensive, flexible ecosystem of tools, libraries and community resources that lets researchers push the state-of-the-art in ML and developers easily build and deploy ML powered applications.
 
+![1_37N7BHNaEsXPaerNQ8wBdA](https://user-images.githubusercontent.com/43414928/76177685-07835100-61db-11ea-84d2-012d37783e0d.png)
 
 
 ### <strong>Tensorflow Installtion on Windows</strong>
 
 #### Prerequisties
  To setup Tensorflow on Windows, you have to ensure that the necessary system requirements and prerequisties are followed: 
-- Python 3.5-3.7 should be installed on your System Path. You can check out your Python Version by opening the Command Prompt and typing in: ```python --version```
-- pip 19.0 or a higher version should be installed which enables to download Third Party Python Packages. You can check out your Python Version by opening the Command Prompt and typing in: ```pip --version```
-- Windows 7 or later (64-bit)
-- GPU Support with a CUDA-enabled Card
+1. Python 3.5-3.7 should be installed on your System Path. You can check out your Python Version by opening the Command Prompt and typing in: ```python --version```
+2. pip 19.0 or a higher version should be installed which enables to download Third Party Python Packages. You can check out your Python Version by opening the Command Prompt and typing in: ```pip --version```
+3. Windows 7 or later (64-bit)
+4. GPU Support with a CUDA-enabled Card
 
 Once the necessary requirements and prerequisties have been verified, we will now move onto setting up Tensorflow on Windows by creating a Development Environment. For this purpose we are going to use **virtualenv** which is a tool to create isolated environments where we can install the necessary directories.
 
@@ -68,6 +70,8 @@ Now we have seen how we can install Tensorflow on Windows using pip and conda. N
 We will see an output on the Command Prompt Screen which will verify that Tensorflow is now up and running on our system.
 
 
+<hr />
+
 
 ### <strong>Tensorflow Installtion on Linux</strong>
 
@@ -104,3 +108,5 @@ pip install -U setuptools
 ```
 pip install tensorflow
 ```
+
+> #### *Refer the official tensorflow documentation for further details :* https://www.tensorflow.org/install
