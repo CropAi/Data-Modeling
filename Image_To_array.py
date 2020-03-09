@@ -32,6 +32,7 @@ class ImageToArray():
             return [[]]
 
 if __name__ == "__main__":
-    img = ImageToArray("ram.png")
+    file_name = str(input())
+    img = ImageToArray(file_name)
     data = img.convert_to_greyscale()
     print(data)
