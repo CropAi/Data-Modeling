@@ -1,3 +1,9 @@
+import tensorflow as tf
+from tensorflow.keras.layers import Conv2D,MaxPool2D,Dense,Flatten,Dropout,Input,Lambda,Activation
+from tensorflow.keras.models import Model,Sequential
+from tensorflow.keras import backend as K
+
+
 def siamese_model(input_shape):
     
     '''
