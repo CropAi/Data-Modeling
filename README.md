@@ -7,10 +7,9 @@ Tensorflow is a popular end-to-end Machine Learning Library from Google whcih su
 
 
 
-### <strong>Tensorflow Installtion on Windows</strong>
+### <strong>Tensorflow Installation on Windows</strong>
 
-#### Prerequisties
- <b>Prerequisites</b>
+#### <b>Prerequisites</b>
 1. Python 3.5-3.7 should be installed on your System Path. You can check out your Python Version by opening the Command Prompt and typing in: ```python --version```
 2. pip 19.0 or a higher version should be installed which enables to download Third Party Python Packages. You can check out your Python Version by opening the Command Prompt and typing in: ```pip --version```
 3. Windows 7 or later (64-bit)
@@ -70,19 +69,20 @@ We will see an output on the Command Prompt Screen which will verify that Tensor
 
 
 
-### <strong>Tensorflow Installtion on Linux</strong>
+## <strong>Tensorflow Installation on Linux</strong>
 
 ### <b>Prerequisites</b>
 1. Python 3.3 or higher
 2. pip 19.0 or a higher version 
 3. At least 1GB of RAM
 
-### <b>Step 1: Install python3-venv</b>
+### Installation
+#### <b>Step 1: Install python3-venv</b>
 ```
 apt-get install python3-venv -y
 ```
 
-### <b>Step 2: Create and activate a Python virtual environment</b>
+#### <b>Step 2: Create and activate a Python virtual environment</b>
 ```
 python3 -m venv venv
 source ./venv/bin/activate
@@ -92,17 +92,17 @@ output:
 (venv) root@ubuntu:~#
 ```
 
-### <b>Step 3: Update PIP</b>
+#### <b>Step 3: Update PIP</b>
 ```
 pip install -U pip
 ```
 
-### <b>Step 4: Update setuptools</b>
+#### <b>Step 4: Update setuptools</b>
 ```
 pip install -U setuptools
 ```
 
-### <b>Step 5: Install TensorFlow</b>
+#### <b>Step 5: Install TensorFlow</b>
 ```
 pip install tensorflow
 ```
