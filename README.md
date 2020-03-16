@@ -103,6 +103,8 @@ We will see an output on the Command Prompt Screen which will verify that Tensor
 
 
 
+
+
 ## <strong>Tensorflow Installation on Linux</strong>
 
 ### <b>Prerequisites</b>
