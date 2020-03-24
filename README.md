@@ -145,3 +145,5 @@ pip install tensorflow
 
 *For more details, visit the official tensorflow documentation page : https://www.tensorflow.org/*
 
+Before contributing to this project do check [CONTRIBUTING.md](https://github.com/CropAi/Data-Modeling/blob/master/CONTRIBUTING.md) file.
+
