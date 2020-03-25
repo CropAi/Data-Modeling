@@ -1,0 +1,11 @@
+Required Libraries For Data Modeling
+
+1. Numpy
+2. Pandas
+3. Matplotlib
+4. Os
+5. Scipy
+6. Opencv
+7. Scikit-learn
+8. Keras
+9. Tensorflow
