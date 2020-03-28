@@ -16,7 +16,7 @@ Tensorflow is a popular end-to-end Machine Learning Library from Google whcih su
 3. Windows 7 or later (64-bit)
 4. GPU Support with a CUDA-enabled Card
 
-Once the necessary requirements and prerequisites have been verified, we will now move onto setting up Tensorflow on Windows by creating a Development Environment. For this purpose we are going to use **virtualenv** which is a tool to create isolated environments where we can install the necessary directories.
+Once the necessary requirements and prerequisties have been verified, we will now move onto setting up Tensorflow on Windows by creating a Development Environment. For this purpose we are going to use **virtualenv** which is a tool to create isolated environments where we can install the necessary directories.
 
 #### Installing a virtual environment
 To install a Virtual Environment, follow the following steps: 
@@ -47,7 +47,7 @@ virtualenv --system-site-packages -p python3 ./venv
 ```
 pip list
 ```
-#### <b>Step 4:Incase the pip version has been deprecated, it is advisable to follow these steps to upgrade the pip:</b>
+#### <b>Step 4:Incase the pip version has been depercated, it is advisable to follow these steps to upgrade the pip:</b>
 ```
 pip install --upgrade pip
 ```
@@ -61,7 +61,7 @@ deactivate
 ```
 
 
-These commands will install Tensorflow on a Windows System with ease using pip. In case you are using an **Anaconda Navigator**, there are a separate set of commands which are explained here: 
+These commands will install Tensorflow on a Windows System with ease using pip. In case you are using an **Anaconda Navigator**, there are seperate set of commands which are explained here: 
 
 #### <b>Step 1: Open the Command Prompt and type in the command:</b>
 ```
