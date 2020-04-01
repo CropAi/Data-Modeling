@@ -11,6 +11,8 @@ Tensorflow is a popular end-to-end Machine Learning Library from Google whcih su
 
 # Our Modules
 -   [label_binarizer_instance.py](https://github.com/CropAi/Data-Modeling/blob/master/modules/label_binarizer_instance.py)
+-   [label_images.py](https://github.com/CropAi/Data-Modeling/blob/master/label_images.py)
+: This python file is used to download the model file from google drive and run predictions on the image coming from the frontend.
 
 Refer [this](https://github.com/CropAi/Data-Modeling/blob/master/docs/transfer_learning.md) for knowing how to use transfer learning for Crop Disease Detection. 
 
