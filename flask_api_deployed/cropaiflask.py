@@ -8,6 +8,7 @@ from keras.preprocessing.image import img_to_array
 import numpy as np
 import keras
 import time
+from base64 import decodestring
 
 # Generate timestamp.
 timestr = time.strftime("%Y%m%d-%H%M%S")
@@ -45,8 +46,14 @@ app.config['UPLOAD_FOLDER'] = 'static'
 results = {'PATH': 0, 'PREDICTION': 0}
 
 # Prediction function.
-def predict(img_path):
+def predict(base64file):
     model = tf.keras.models.load_model(model_file) # Load the model.
+    img_path = os.path.join('static',str(str(timestr)+'.png'))
+
+    # The function below decoed the base64 string and saves the image to static folder.
+    with open(img_path,"wb") as f: 
+        f.write(decodestring(base64file))
+
     img = image.load_img(img_path, target_size=(224, 224))
     img_array = img_to_array(img) # Convert the images into NumPy array.
     img_array = np.expand_dims(img_array, axis=0)
@@ -70,11 +77,9 @@ def index():
         try:
             image = request.files['file']   # Get the file.
             filename = timestr + secure_filename(image.filename)  # Get secured file name and add timestamp to make it unique.
-            print("filename")
-            print(filename)
             image.save(os.path.join('static', filename))
             path = os.path.join('static', filename)
-            result = predict(img_path=path) # Send the image to prediction algorithm.
+            result = predict(base64file=path) # Send the image to prediction algorithm.
             return render_template('index.html', res=result)
         except:
             return render_template('index.html', res=results)
