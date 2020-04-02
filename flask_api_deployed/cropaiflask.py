@@ -45,6 +45,8 @@ app.config['UPLOAD_FOLDER'] = 'static'
 # Result dictionary to be sent to HTML.
 results = {'PATH': 0, 'PREDICTION': 0}
 
+@app.route('/upload',methods=['POST'])
+
 # Prediction function.
 def predict(base64file):
     model = tf.keras.models.load_model(model_file) # Load the model.
