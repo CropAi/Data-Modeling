@@ -46,15 +46,14 @@ app.config['UPLOAD_FOLDER'] = 'static'
 results = {'PATH': 0, 'PREDICTION': 0}
 
 @app.route('/upload',methods=['POST'])
-
 # Prediction function.
-def predict(base64file):
+def predict():
     model = tf.keras.models.load_model(model_file) # Load the model.
     img_path = os.path.join('static',str(str(timestr)+'.png'))
 
     # The function below decoed the base64 string and saves the image to static folder.
     with open(img_path,"wb") as f: 
-        f.write(decodestring(base64file))
+        f.write(decodestring(request.form['image_data'])) 
 
     img = image.load_img(img_path, target_size=(224, 224))
     img_array = img_to_array(img) # Convert the images into NumPy array.
