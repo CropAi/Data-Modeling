@@ -1,4 +1,4 @@
-import numpy as np
+mport numpy as np
 import keras
 from keras.preprocessing.image import ImageDataGenerator
 from keras.layers.normalization import BatchNormalization
@@ -70,21 +70,21 @@ class DataLoader:
     
     def load_images_from_folder(self,folder):
 
-        files1 = glob.glob (os.path.join(folder,'Pepper__bell___Bacterial_spot','*.JPG'))
-        files2 = glob.glob (os.path.join(folder,'Pepper__bell___healthy','*.JPG'))
-        files3 = glob.glob (os.path.join(folder,'Potato___Early_blight','*.JPG'))
-        files4 = glob.glob (os.path.join(folder,'Potato___healthy','*.JPG'))
-        files5 = glob.glob (os.path.join(folder,'Potato___Late_blight','*.JPG'))
-        files6 = glob.glob (os.path.join(folder,'Tomato_Bacterial_spot','*.JPG'))
-        files7 = glob.glob (os.path.join(folder,'Tomato_Early_blight','*.JPG'))
-        files8 = glob.glob (os.path.join(folder,'Tomato_healthy','*.JPG') 
-        files9 = glob.glob (os.path.join(folder,'Tomato_Late_blight','*.JPG'))
-        files10 = glob.glob (os.path.join(folder,'Tomato_Leaf_Mold','*.JPG'))
-        files11 = glob.glob (os.path.join(folder,'Tomato_Septoria_leaf_spot','*.JPG'))
-        files12 = glob.glob (os.path.join(folder,'Tomato_Spider_mites_Two_spotted_spider_mite','*.JPG'))
-        files13 = glob.glob (os.path.join(folder,'Tomato__Target_Spot','*.JPG'))
-        files14 = glob.glob (os.path.join(folder,'Tomato__Tomato_mosaic_virus','*.JPG'))
-        files15 = glob.glob (os.path.join(folder,'Tomato__Tomato_YellowLeaf__Curl_Virus','*.JPG'))
+        file1  = glob.glob (os.path.join(folder,'Pepper__bell___Bacterial_spot','*.JPG'))
+        file2  = glob.glob (os.path.join(folder,'Pepper__bell___healthy','*.JPG'))
+        file3  = glob.glob (os.path.join(folder,'Potato___Early_blight','*.JPG'))
+        file4  = glob.glob (os.path.join(folder,'Potato___healthy','*.JPG'))
+        file5  = glob.glob (os.path.join(folder,'Potato___Late_blight','*.JPG'))
+        file6  = glob.glob (os.path.join(folder,'Tomato_Bacterial_spot','*.JPG'))
+        file7  = glob.glob (os.path.join(folder,'Tomato_Early_blight','*.JPG'))
+        file8  = glob.glob (os.path.join(folder,'Tomato_healthy','*.JPG')) 
+        file9  = glob.glob (os.path.join(folder,'Tomato_Late_blight','*.JPG'))
+        file10 = glob.glob (os.path.join(folder,'Tomato_Leaf_Mold','*.JPG'))
+        file11 = glob.glob (os.path.join(folder,'Tomato_Septoria_leaf_spot','*.JPG'))
+        file12 = glob.glob (os.path.join(folder,'Tomato_Spider_mites_Two_spotted_spider_mite','*.JPG'))
+        file13 = glob.glob (os.path.join(folder,'Tomato__Target_Spot','*.JPG'))
+        file14 = glob.glob (os.path.join(folder,'Tomato__Tomato_mosaic_virus','*.JPG'))
+        file15 = glob.glob (os.path.join(folder,'Tomato__Tomato_YellowLeaf__Curl_Virus','*.JPG'))
 
 
 
@@ -92,7 +92,7 @@ class DataLoader:
         with h5py.File(os.path.join(datapath, 'main.h5'), 'a') as hdf:
             G = hdf.create_group('Group')
             X1_data=[]
-            for myFile in files1:
+            for myFile in file1:
                 #print(myFile)
                 image = cv2.imread (myFile)
                 X1_data.append (image)
@@ -101,7 +101,7 @@ class DataLoader:
             G1.create_dataset('dataset1',data=X1_data)
             X1_data=[]
             
-            for myFile in files2:
+            for myFile in file2:
                 #print(myFile)
                 image = cv2.imread (myFile)
                 X1_data.append (image)
@@ -109,7 +109,7 @@ class DataLoader:
             G2 = hdf.create_group('G/Group2')
             G2.create_dataset('dataset2',data=X1_data)
             X1_data=[]
-            for myFile in files3:
+            for myFile in file3:
                 #print(myFile)
                 image = cv2.imread (myFile)
                 X1_data.append (image)
@@ -117,7 +117,7 @@ class DataLoader:
             G3 = hdf.create_group('G/Group3')
             G3.create_dataset('dataset3',data=X1_data)
             X1_data=[]
-            for myFile in files4:
+            for myFile in file4:
                 #print(myFile)
                 image = cv2.imread (myFile)
                 X1_data.append (image)
@@ -125,7 +125,7 @@ class DataLoader:
             G4 = hdf.create_group('G/Group4')
             G4.create_dataset('dataset4',data=X1_data)
             X1_data=[]
-            for myFile in files5:
+            for myFile in file5:
                 #print(myFile)
                 image = cv2.imread (myFile)
                 X1_data.append (image)
@@ -133,7 +133,7 @@ class DataLoader:
             G5 = hdf.create_group('G/Group5')
             G5.create_dataset('dataset5',data=X1_data)
             X1_data=[]
-            for myFile in files6:
+            for myFile in file6:
                 #print(myFile)
                 image = cv2.imread (myFile)
                 X1_data.append (image)
@@ -141,7 +141,7 @@ class DataLoader:
             G6 = hdf.create_group('G/Group6')
             G6.create_dataset('dataset6',data=X1_data)
             X1_data=[]
-            for myFile in files7:
+            for myFile in file7:
                 #print(myFile)
                 image = cv2.imread (myFile)
                 X1_data.append (image)
@@ -149,7 +149,7 @@ class DataLoader:
             G7 = hdf.create_group('G/Group7')
             G7.create_dataset('dataset7',data=X1_data)
             X1_data=[]
-            for myFile in files8:
+            for myFile in file8:
                 #print(myFile)
                 image = cv2.imread (myFile)
                 X1_data.append (image)
@@ -157,7 +157,7 @@ class DataLoader:
             G8 = hdf.create_group('G/Group8')
             G8.create_dataset('dataset8',data=X1_data)
             X1_data=[]
-            for myFile in files9:
+            for myFile in file9:
                 #print(myFile)
                 image = cv2.imread (myFile)
                 X1_data.append (image)
@@ -165,7 +165,7 @@ class DataLoader:
             G9 = hdf.create_group('G/Group9')
             G9.create_dataset('dataset9',data=X1_data)
             X1_data=[]
-            for myFile in files10:
+            for myFile in file10:
                 #print(myFile)
                 image = cv2.imread (myFile)
                 X1_data.append (image)
@@ -173,7 +173,7 @@ class DataLoader:
             G10 = hdf.create_group('G/Group10')
             G10.create_dataset('dataset10',data=X1_data)
             X1_data=[]
-            for myFile in files11:
+            for myFile in file11:
                 #print(myFile)
                 image = cv2.imread (myFile)
                 X1_data.append (image)
@@ -181,7 +181,7 @@ class DataLoader:
             G11 = hdf.create_group('G/Group11')
             G11.create_dataset('dataset11',data=X1_data)
             X1_data=[]
-            for myFile in files12:
+            for myFile in file12:
                 #print(myFile)
                 image = cv2.imread (myFile)
                 X1_data.append (image)
@@ -189,7 +189,7 @@ class DataLoader:
             G12 = hdf.create_group('G/Group12')
             G12.create_dataset('dataset12',data=X1_data)
             X1_data=[]
-            for myFile in files13:
+            for myFile in file13:
                 #print(myFile)
                 image = cv2.imread (myFile)
                 X1_data.append (image)
@@ -197,7 +197,7 @@ class DataLoader:
             G13 = hdf.create_group('G/Group13')
             G13.create_dataset('dataset13',data=X1_data)
             X1_data=[]
-            for myFile in files14:
+            for myFile in file14:
                 #print(myFile)
                 image = cv2.imread (myFile)
                 X1_data.append (image)
@@ -205,11 +205,10 @@ class DataLoader:
             G14 = hdf.create_group('G/Group14')
             G14.create_dataset('dataset14',data=X1_data)
             X1_data=[]
-            for myFile in files15:
+            for myFile in file15:
                 #print(myFile)
                 image = cv2.imread (myFile)
                 X1_data.append (image)
             X1_data=np.array(X1_data)
             G15 = hdf.create_group('G/Group15')
             G15.create_dataset('dataset15',data=X1_data)
-
