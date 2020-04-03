@@ -57,11 +57,11 @@ class Model():
       return (number_to_label[index[0]])
 
 
-#if __name__ == "__main__":
-#    img_file = sys.argv[1]
-#    md = Model()
-#    md.download_model()
-#    print(md.getModel())
-#    print(md)
-#    result = md.predict_image(img_file)
-#    print(result)
+if __name__ == "__main__":
+   img_file = sys.argv[1]
+   md = Model()
+   md.download_model()
+   print(md.getModel())
+   print(md)
+   result = md.predict_image(img_file)
+   print(result)
