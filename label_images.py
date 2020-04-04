@@ -45,7 +45,7 @@ class Model():
             return ""
 			
     def predict_image(self, img_path):
-      img = image.load_img(img_path, target_size=(256, 256))
+      img = image.load_img(img_path, target_size=(224, 224))
       img_array = img_to_array(img) # Convert the images into NumPy array.
       img_array = np.expand_dims(img_array, axis=0)
       predictions = self.model.predict(img_array)
