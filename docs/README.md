@@ -18,7 +18,8 @@ Tensorflow is a popular end-to-end Machine Learning Library from Google whcih su
    You will need the encoder.pkl file present in Data Modelling Repo.
    Download this repo and extract it. Copy the encoder.pkl file and paste it in your backend devt. (encoder.pkl file is          experimental....Work in progress)
 
-   Run the label_images.py file using this :.. `python3 label_images.py [path to your leaf image]`..
+   Run the label_images.py file using this.. 
+   `python3 label_images.py [path to your leaf image]`..
 
 Refer [this](https://github.com/CropAi/Data-Modeling/blob/master/docs/transfer_learning.md) for knowing how to use transfer learning for Crop Disease Detection. 
 
