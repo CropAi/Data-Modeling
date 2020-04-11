@@ -1,3 +1,4 @@
+import sys
 from google_drive_downloader import GoogleDriveDownloader as gdd
 from urllib.request import urlopen
 import pickle
@@ -14,13 +15,15 @@ class Model():
         encoder{{string}}: load all the encoded file from encoder
     """
     def __init__(self, model_path ='./model.h5', encoder_path = 'encoder.pkl'):
+        self.encoder = pickle.load(open(encoder_path, "rb"))
+        self.encoder = {k: v for k, v in sorted(self.encoder.items(), key=lambda item: item[1])}
         self.model_path = model_path
         gdd.download_file_from_google_drive(file_id='1Ssd4N2SWkro87azRHjObedqOTbxZ7dZ6',
                                             dest_path=model_path,
                                             unzip=True)
         self.model = load_model(model_path)
         self.model.summary
-        self.encoder = pickle.load(open(encoder_path, 'rb'))
+        #self.encoder = pickle.load(open(encoder_path, 'rb'))
         
     def download_model(self, model_url = 'https://drive.google.com/open?id=1Ssd4N2SWkro87azRHjObedqOTbxZ7dZ6'):
         response = urlopen(model_url)
@@ -51,16 +54,16 @@ class Model():
       predictions = self.model.predict(img_array)
       index = np.flip(np.argsort(predictions[0])) # Sort the predictions in descending order.
 
-      number_to_label = ['Tomato__Target_Spot', 'Tomato_Septoria_leaf_spot', 'Pepper__bell___Bacterial_spot', 'Tomato_healthy', 'Tomato_Early_blight', 'Potato___Late_blight', 'Potato___Early_blight', 'Pepper__bell___healthy', 'Tomato_Leaf_Mold', 'Tomato_Bacterial_spot', 
-                         'Tomato__Tomato_mosaic_virus', 'Tomato__Tomato_YellowLeaf__Curl_Virus', 'Tomato_Spider_mites_Two_spotted_spider_mite', 'Tomato_Late_blight', 'Potato___healthy']
-
+      #number_to_label = ['Tomato__Target_Spot', 'Tomato_Septoria_leaf_spot', 'Pepper__bell___Bacterial_spot', 'Tomato_healthy', 'Tomato_Early_blight', 'Potato___Late_blight', 'Potato___Early_blight', 'Pepper__bell___healthy', 'Tomato_Leaf_Mold', 'Tomato_Bacterial_spot', 
+      #                   'Tomato__Tomato_mosaic_virus', 'Tomato__Tomato_YellowLeaf__Curl_Virus', 'Tomato_Spider_mites_Two_spotted_spider_mite', 'Tomato_Late_blight', 'Potato___healthy']
+      number_to_label = list(self.encoder.keys())
       return (number_to_label[index[0]])
 
 
 if __name__ == "__main__":
    img_file = sys.argv[1]
    md = Model()
-   md.download_model()
+   ##md.download_model()
    print(md.getModel())
    print(md)
    result = md.predict_image(img_file)
