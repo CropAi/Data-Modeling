@@ -18,14 +18,14 @@ class Model():
         self.encoder = pickle.load(open(encoder_path, "rb"))
         self.encoder = {k: v for k, v in sorted(self.encoder.items(), key=lambda item: item[1])}
         self.model_path = model_path
-        gdd.download_file_from_google_drive(file_id='1Ssd4N2SWkro87azRHjObedqOTbxZ7dZ6',
+        gdd.download_file_from_google_drive(file_id='1wvi6e4sWnuyqU_pZh_a2Wq75gzGOOYYq',
                                             dest_path=model_path,
                                             unzip=True)
         self.model = load_model(model_path)
         self.model.summary
         #self.encoder = pickle.load(open(encoder_path, 'rb'))
-        
-    def download_model(self, model_url = 'https://drive.google.com/open?id=1Ssd4N2SWkro87azRHjObedqOTbxZ7dZ6'):
+       
+    def download_model(self, model_url = 'https://drive.google.com/open?id=1wvi6e4sWnuyqU_pZh_a2Wq75gzGOOYYq'):
         response = urlopen(model_url)
         html = load_model(response.read())
         return html
