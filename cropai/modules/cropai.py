@@ -1,4 +1,4 @@
-mport numpy as np
+import numpy as np
 import keras
 from keras.preprocessing.image import ImageDataGenerator
 from keras.layers.normalization import BatchNormalization
