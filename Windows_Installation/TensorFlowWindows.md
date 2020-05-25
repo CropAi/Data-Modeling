@@ -1,12 +1,3 @@
-# <strong>Data Modelling for Crop Analyzer</strong>
-Dataset used : https://www.kaggle.com/emmarex/plantdisease
-
-## Installation
-Tensorflow is a popular end-to-end Machine Learning Library from Google whcih supports developing Machine Learning Models and Data Modelling. It has a comprehensive, flexible ecosystem of tools, libraries and community resources that lets researchers push the state-of-the-art in ML and developers easily build and deploy ML powered applications.
-![tensorflow](https://user-images.githubusercontent.com/43414928/76705997-45680400-670a-11ea-8493-7acc393ebcb8.png)
-
-
-
 ## <strong>Tensorflow Installation on Windows</strong>
 
 #### <b>Prerequisites</b>
@@ -101,49 +92,8 @@ python
 ```
 We will see an output on the Command Prompt Screen which will verify that Tensorflow is now up and running on our system.
 
-
-
-
-
-## <strong>Tensorflow Installation on Linux</strong>
-
-### <b>Prerequisites</b>
-1. Python 3.3 or higher
-2. pip 19.0 or a higher version 
-3. At least 1GB of RAM
-
-### Installation
-#### <b>Step 1: Install python3-venv</b>
-```
-apt-get install python3-venv -y
-```
-
-#### <b>Step 2: Create and activate a Python virtual environment</b>
-```
-python3 -m venv venv
-source ./venv/bin/activate
-```
-output:
-```
-(venv) root@ubuntu:~#
-```
-
-#### <b>Step 3: Update PIP</b>
-```
-pip install -U pip
-```
-
-#### <b>Step 4: Update setuptools</b>
-```
-pip install -U setuptools
-```
-
-#### <b>Step 5: Install TensorFlow</b>
-```
-pip install tensorflow
-```
-
 *For more details, visit the official tensorflow documentation page : https://www.tensorflow.org/*
 
-Before contributing to this project do check [CONTRIBUTING.md](https://github.com/CropAi/Data-Modeling/blob/master/CONTRIBUTING.md) file.
+
+
 
